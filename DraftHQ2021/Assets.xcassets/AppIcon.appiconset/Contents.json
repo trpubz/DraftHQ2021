@@ -1,46 +1,55 @@
 {
   "images" : [
     {
+      "filename" : "baseball-4.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
     },
     {
+      "filename" : "baseball-3.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "16x16"
     },
     {
+      "filename" : "baseball-2.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
     },
     {
+      "filename" : "baseball.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
     },
     {
+      "filename" : "baseball@1x-2.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "128x128"
     },
     {
+      "filename" : "baseball@2x-1.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "128x128"
     },
     {
+      "filename" : "baseball@1x-1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
     },
     {
+      "filename" : "baseball@2x.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "256x256"
     },
     {
+      "filename" : "baseball@1x.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"

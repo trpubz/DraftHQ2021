@@ -13,6 +13,39 @@
 		250B278425FFB3E600AE9FAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 250B278325FFB3E600AE9FAD /* Preview Assets.xcassets */; };
 		250B279025FFB3E600AE9FAD /* DraftHQ2021Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B278F25FFB3E600AE9FAD /* DraftHQ2021Tests.swift */; };
 		250B279B25FFB3E600AE9FAD /* DraftHQ2021UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B279A25FFB3E600AE9FAD /* DraftHQ2021UITests.swift */; };
+		250B27AF2600221A00AE9FAD /* hitters.json in Resources */ = {isa = PBXBuildFile; fileRef = 250B27AC2600221A00AE9FAD /* hitters.json */; };
+		250B27B02600221A00AE9FAD /* pitchers.json in Resources */ = {isa = PBXBuildFile; fileRef = 250B27AD2600221A00AE9FAD /* pitchers.json */; };
+		250B27B12600221A00AE9FAD /* teams.json in Resources */ = {isa = PBXBuildFile; fileRef = 250B27AE2600221A00AE9FAD /* teams.json */; };
+		250B27BA2600225B00AE9FAD /* PlayerPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27B62600225B00AE9FAD /* PlayerPool.swift */; };
+		250B27BB2600225B00AE9FAD /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27B72600225B00AE9FAD /* Team.swift */; };
+		250B27BC2600225B00AE9FAD /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27B82600225B00AE9FAD /* League.swift */; };
+		250B27BD2600225B00AE9FAD /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27B92600225B00AE9FAD /* Player.swift */; };
+		250B27DF2600227600AE9FAD /* RostersHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27C32600227600AE9FAD /* RostersHUD.swift */; };
+		250B27E02600227600AE9FAD /* TeamRoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27C42600227600AE9FAD /* TeamRoster.swift */; };
+		250B27E12600227600AE9FAD /* RostersTabPlayerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27C52600227600AE9FAD /* RostersTabPlayerRow.swift */; };
+		250B27E22600227600AE9FAD /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27C92600227600AE9FAD /* SearchView.swift */; };
+		250B27E32600227600AE9FAD /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27CA2600227600AE9FAD /* SearchResults.swift */; };
+		250B27E42600227600AE9FAD /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27CB2600227600AE9FAD /* SearchField.swift */; };
+		250B27E52600227600AE9FAD /* HeaderRows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27CC2600227600AE9FAD /* HeaderRows.swift */; };
+		250B27E62600227600AE9FAD /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27CE2600227600AE9FAD /* CustomSlider.swift */; };
+		250B27E72600227600AE9FAD /* RowExpandButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27CF2600227600AE9FAD /* RowExpandButton.swift */; };
+		250B27E82600227600AE9FAD /* HitterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27D02600227600AE9FAD /* HitterRow.swift */; };
+		250B27E92600227600AE9FAD /* PitcherRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27D12600227600AE9FAD /* PitcherRow.swift */; };
+		250B27EA2600227600AE9FAD /* ExpandedPlayerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27D22600227600AE9FAD /* ExpandedPlayerRow.swift */; };
+		250B27EB2600227600AE9FAD /* PlayersHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27D32600227600AE9FAD /* PlayersHUD.swift */; };
+		250B27EC2600227600AE9FAD /* LeagueHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27D42600227600AE9FAD /* LeagueHUD.swift */; };
+		250B27ED2600227600AE9FAD /* TeamHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27D62600227600AE9FAD /* TeamHUD.swift */; };
+		250B27EE2600227600AE9FAD /* MyTeamHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27D72600227600AE9FAD /* MyTeamHUD.swift */; };
+		250B27EF2600227600AE9FAD /* MyRosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27D82600227600AE9FAD /* MyRosterView.swift */; };
+		250B27F02600227600AE9FAD /* TeamHUDsStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27D92600227600AE9FAD /* TeamHUDsStack.swift */; };
+		250B27F12600227600AE9FAD /* CentralHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27DA2600227600AE9FAD /* CentralHUD.swift */; };
+		250B27F22600227600AE9FAD /* TeamRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27DC2600227600AE9FAD /* TeamRow.swift */; };
+		250B27F32600227600AE9FAD /* StandingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27DD2600227600AE9FAD /* StandingsView.swift */; };
+		250B27F42600227600AE9FAD /* StandingsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27DE2600227600AE9FAD /* StandingsHeader.swift */; };
+		250B2800260022F300AE9FAD /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27FC260022F300AE9FAD /* Data.swift */; };
+		250B2801260022F300AE9FAD /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27FD260022F300AE9FAD /* Functions.swift */; };
+		250B2802260022F300AE9FAD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27FE260022F300AE9FAD /* Extensions.swift */; };
+		250B280F260023ED00AE9FAD /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B280E260023ED00AE9FAD /* Dashboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +79,39 @@
 		250B279625FFB3E600AE9FAD /* DraftHQ2021UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DraftHQ2021UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		250B279A25FFB3E600AE9FAD /* DraftHQ2021UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftHQ2021UITests.swift; sourceTree = "<group>"; };
 		250B279C25FFB3E600AE9FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		250B27AC2600221A00AE9FAD /* hitters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hitters.json; sourceTree = "<group>"; };
+		250B27AD2600221A00AE9FAD /* pitchers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pitchers.json; sourceTree = "<group>"; };
+		250B27AE2600221A00AE9FAD /* teams.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = teams.json; sourceTree = "<group>"; };
+		250B27B62600225B00AE9FAD /* PlayerPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerPool.swift; sourceTree = "<group>"; };
+		250B27B72600225B00AE9FAD /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		250B27B82600225B00AE9FAD /* League.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		250B27B92600225B00AE9FAD /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		250B27C32600227600AE9FAD /* RostersHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RostersHUD.swift; sourceTree = "<group>"; };
+		250B27C42600227600AE9FAD /* TeamRoster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamRoster.swift; sourceTree = "<group>"; };
+		250B27C52600227600AE9FAD /* RostersTabPlayerRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RostersTabPlayerRow.swift; sourceTree = "<group>"; };
+		250B27C92600227600AE9FAD /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		250B27CA2600227600AE9FAD /* SearchResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
+		250B27CB2600227600AE9FAD /* SearchField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchField.swift; sourceTree = "<group>"; };
+		250B27CC2600227600AE9FAD /* HeaderRows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderRows.swift; sourceTree = "<group>"; };
+		250B27CE2600227600AE9FAD /* CustomSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
+		250B27CF2600227600AE9FAD /* RowExpandButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowExpandButton.swift; sourceTree = "<group>"; };
+		250B27D02600227600AE9FAD /* HitterRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HitterRow.swift; sourceTree = "<group>"; };
+		250B27D12600227600AE9FAD /* PitcherRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitcherRow.swift; sourceTree = "<group>"; };
+		250B27D22600227600AE9FAD /* ExpandedPlayerRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandedPlayerRow.swift; sourceTree = "<group>"; };
+		250B27D32600227600AE9FAD /* PlayersHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersHUD.swift; sourceTree = "<group>"; };
+		250B27D42600227600AE9FAD /* LeagueHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueHUD.swift; sourceTree = "<group>"; };
+		250B27D62600227600AE9FAD /* TeamHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamHUD.swift; sourceTree = "<group>"; };
+		250B27D72600227600AE9FAD /* MyTeamHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTeamHUD.swift; sourceTree = "<group>"; };
+		250B27D82600227600AE9FAD /* MyRosterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRosterView.swift; sourceTree = "<group>"; };
+		250B27D92600227600AE9FAD /* TeamHUDsStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamHUDsStack.swift; sourceTree = "<group>"; };
+		250B27DA2600227600AE9FAD /* CentralHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentralHUD.swift; sourceTree = "<group>"; };
+		250B27DC2600227600AE9FAD /* TeamRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamRow.swift; sourceTree = "<group>"; };
+		250B27DD2600227600AE9FAD /* StandingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandingsView.swift; sourceTree = "<group>"; };
+		250B27DE2600227600AE9FAD /* StandingsHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandingsHeader.swift; sourceTree = "<group>"; };
+		250B27FC260022F300AE9FAD /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		250B27FD260022F300AE9FAD /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		250B27FE260022F300AE9FAD /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		250B280E260023ED00AE9FAD /* Dashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +162,10 @@
 		250B277B25FFB3E500AE9FAD /* DraftHQ2021 */ = {
 			isa = PBXGroup;
 			children = (
+				250B27FB260022F300AE9FAD /* Globals */,
+				250B27C12600227600AE9FAD /* Views */,
+				250B27B52600225B00AE9FAD /* Models */,
+				250B27AB2600220000AE9FAD /* Data */,
 				250B277C25FFB3E500AE9FAD /* DraftHQ2021App.swift */,
 				250B277E25FFB3E500AE9FAD /* ContentView.swift */,
 				250B278025FFB3E600AE9FAD /* Assets.xcassets */,
@@ -130,6 +200,131 @@
 				250B279C25FFB3E600AE9FAD /* Info.plist */,
 			);
 			path = DraftHQ2021UITests;
+			sourceTree = "<group>";
+		};
+		250B27AB2600220000AE9FAD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				250B27AC2600221A00AE9FAD /* hitters.json */,
+				250B27AD2600221A00AE9FAD /* pitchers.json */,
+				250B27AE2600221A00AE9FAD /* teams.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		250B27B52600225B00AE9FAD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				250B27B62600225B00AE9FAD /* PlayerPool.swift */,
+				250B27B72600225B00AE9FAD /* Team.swift */,
+				250B27B82600225B00AE9FAD /* League.swift */,
+				250B27B92600225B00AE9FAD /* Player.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		250B27C12600227600AE9FAD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				250B280E260023ED00AE9FAD /* Dashboard.swift */,
+				250B280D260023D800AE9FAD /* CentralHUD */,
+				250B27D42600227600AE9FAD /* LeagueHUD.swift */,
+				250B27D52600227600AE9FAD /* Teams */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		250B27C22600227600AE9FAD /* CHUD - Rosters */ = {
+			isa = PBXGroup;
+			children = (
+				250B27C32600227600AE9FAD /* RostersHUD.swift */,
+				250B27C42600227600AE9FAD /* TeamRoster.swift */,
+				250B27C52600227600AE9FAD /* RostersTabPlayerRow.swift */,
+			);
+			path = "CHUD - Rosters";
+			sourceTree = "<group>";
+		};
+		250B27C62600227600AE9FAD /* CHUD - Players */ = {
+			isa = PBXGroup;
+			children = (
+				250B27C72600227600AE9FAD /* Player Views */,
+			);
+			path = "CHUD - Players";
+			sourceTree = "<group>";
+		};
+		250B27C72600227600AE9FAD /* Player Views */ = {
+			isa = PBXGroup;
+			children = (
+				250B27C82600227600AE9FAD /* Search Area */,
+				250B27CC2600227600AE9FAD /* HeaderRows.swift */,
+				250B27CD2600227600AE9FAD /* Components */,
+				250B27D02600227600AE9FAD /* HitterRow.swift */,
+				250B27D12600227600AE9FAD /* PitcherRow.swift */,
+				250B27D22600227600AE9FAD /* ExpandedPlayerRow.swift */,
+				250B27D32600227600AE9FAD /* PlayersHUD.swift */,
+			);
+			path = "Player Views";
+			sourceTree = "<group>";
+		};
+		250B27C82600227600AE9FAD /* Search Area */ = {
+			isa = PBXGroup;
+			children = (
+				250B27C92600227600AE9FAD /* SearchView.swift */,
+				250B27CA2600227600AE9FAD /* SearchResults.swift */,
+				250B27CB2600227600AE9FAD /* SearchField.swift */,
+			);
+			path = "Search Area";
+			sourceTree = "<group>";
+		};
+		250B27CD2600227600AE9FAD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				250B27CE2600227600AE9FAD /* CustomSlider.swift */,
+				250B27CF2600227600AE9FAD /* RowExpandButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		250B27D52600227600AE9FAD /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+				250B27D62600227600AE9FAD /* TeamHUD.swift */,
+				250B27D72600227600AE9FAD /* MyTeamHUD.swift */,
+				250B27D82600227600AE9FAD /* MyRosterView.swift */,
+				250B27D92600227600AE9FAD /* TeamHUDsStack.swift */,
+			);
+			path = Teams;
+			sourceTree = "<group>";
+		};
+		250B27DB2600227600AE9FAD /* CHUD - Standings */ = {
+			isa = PBXGroup;
+			children = (
+				250B27DC2600227600AE9FAD /* TeamRow.swift */,
+				250B27DD2600227600AE9FAD /* StandingsView.swift */,
+				250B27DE2600227600AE9FAD /* StandingsHeader.swift */,
+			);
+			path = "CHUD - Standings";
+			sourceTree = "<group>";
+		};
+		250B27FB260022F300AE9FAD /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+				250B27FC260022F300AE9FAD /* Data.swift */,
+				250B27FD260022F300AE9FAD /* Functions.swift */,
+				250B27FE260022F300AE9FAD /* Extensions.swift */,
+			);
+			path = Globals;
+			sourceTree = "<group>";
+		};
+		250B280D260023D800AE9FAD /* CentralHUD */ = {
+			isa = PBXGroup;
+			children = (
+				250B27C22600227600AE9FAD /* CHUD - Rosters */,
+				250B27C62600227600AE9FAD /* CHUD - Players */,
+				250B27DA2600227600AE9FAD /* CentralHUD.swift */,
+				250B27DB2600227600AE9FAD /* CHUD - Standings */,
+			);
+			path = CentralHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +432,9 @@
 			files = (
 				250B278425FFB3E600AE9FAD /* Preview Assets.xcassets in Resources */,
 				250B278125FFB3E600AE9FAD /* Assets.xcassets in Resources */,
+				250B27AF2600221A00AE9FAD /* hitters.json in Resources */,
+				250B27B02600221A00AE9FAD /* pitchers.json in Resources */,
+				250B27B12600221A00AE9FAD /* teams.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +459,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				250B27E32600227600AE9FAD /* SearchResults.swift in Sources */,
+				250B27E72600227600AE9FAD /* RowExpandButton.swift in Sources */,
+				250B27EE2600227600AE9FAD /* MyTeamHUD.swift in Sources */,
+				250B27EA2600227600AE9FAD /* ExpandedPlayerRow.swift in Sources */,
+				250B27E82600227600AE9FAD /* HitterRow.swift in Sources */,
+				250B27F32600227600AE9FAD /* StandingsView.swift in Sources */,
+				250B27ED2600227600AE9FAD /* TeamHUD.swift in Sources */,
+				250B27E62600227600AE9FAD /* CustomSlider.swift in Sources */,
+				250B27F42600227600AE9FAD /* StandingsHeader.swift in Sources */,
+				250B27F12600227600AE9FAD /* CentralHUD.swift in Sources */,
+				250B27F02600227600AE9FAD /* TeamHUDsStack.swift in Sources */,
+				250B27EB2600227600AE9FAD /* PlayersHUD.swift in Sources */,
+				250B27E22600227600AE9FAD /* SearchView.swift in Sources */,
+				250B27BB2600225B00AE9FAD /* Team.swift in Sources */,
+				250B27E52600227600AE9FAD /* HeaderRows.swift in Sources */,
+				250B27E02600227600AE9FAD /* TeamRoster.swift in Sources */,
+				250B27BA2600225B00AE9FAD /* PlayerPool.swift in Sources */,
+				250B27DF2600227600AE9FAD /* RostersHUD.swift in Sources */,
+				250B280F260023ED00AE9FAD /* Dashboard.swift in Sources */,
+				250B2800260022F300AE9FAD /* Data.swift in Sources */,
+				250B2802260022F300AE9FAD /* Extensions.swift in Sources */,
+				250B27E42600227600AE9FAD /* SearchField.swift in Sources */,
 				250B277F25FFB3E500AE9FAD /* ContentView.swift in Sources */,
+				250B27EC2600227600AE9FAD /* LeagueHUD.swift in Sources */,
+				250B27E12600227600AE9FAD /* RostersTabPlayerRow.swift in Sources */,
+				250B2801260022F300AE9FAD /* Functions.swift in Sources */,
+				250B27BC2600225B00AE9FAD /* League.swift in Sources */,
+				250B27EF2600227600AE9FAD /* MyRosterView.swift in Sources */,
+				250B27E92600227600AE9FAD /* PitcherRow.swift in Sources */,
+				250B27F22600227600AE9FAD /* TeamRow.swift in Sources */,
+				250B27BD2600225B00AE9FAD /* Player.swift in Sources */,
 				250B277D25FFB3E500AE9FAD /* DraftHQ2021App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
