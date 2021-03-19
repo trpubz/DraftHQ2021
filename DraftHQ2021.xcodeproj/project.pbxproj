@@ -46,6 +46,8 @@
 		250B2801260022F300AE9FAD /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27FD260022F300AE9FAD /* Functions.swift */; };
 		250B2802260022F300AE9FAD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B27FE260022F300AE9FAD /* Extensions.swift */; };
 		250B280F260023ED00AE9FAD /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B280E260023ED00AE9FAD /* Dashboard.swift */; };
+		250B281526046F7700AE9FAD /* LoadLeague.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B281426046F7700AE9FAD /* LoadLeague.swift */; };
+		250B281D26046FD500AE9FAD /* DraftLeague.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B281C26046FD500AE9FAD /* DraftLeague.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,8 @@
 		250B27FD260022F300AE9FAD /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		250B27FE260022F300AE9FAD /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		250B280E260023ED00AE9FAD /* Dashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		250B281426046F7700AE9FAD /* LoadLeague.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadLeague.swift; sourceTree = "<group>"; };
+		250B281C26046FD500AE9FAD /* DraftLeague.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftLeague.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,12 +166,12 @@
 		250B277B25FFB3E500AE9FAD /* DraftHQ2021 */ = {
 			isa = PBXGroup;
 			children = (
-				250B27FB260022F300AE9FAD /* Globals */,
+				250B277C25FFB3E500AE9FAD /* DraftHQ2021App.swift */,
+				250B277E25FFB3E500AE9FAD /* ContentView.swift */,
 				250B27C12600227600AE9FAD /* Views */,
 				250B27B52600225B00AE9FAD /* Models */,
 				250B27AB2600220000AE9FAD /* Data */,
-				250B277C25FFB3E500AE9FAD /* DraftHQ2021App.swift */,
-				250B277E25FFB3E500AE9FAD /* ContentView.swift */,
+				250B27FB260022F300AE9FAD /* Globals */,
 				250B278025FFB3E600AE9FAD /* Assets.xcassets */,
 				250B278525FFB3E600AE9FAD /* Info.plist */,
 				250B278625FFB3E600AE9FAD /* DraftHQ2021.entitlements */,
@@ -215,9 +219,9 @@
 		250B27B52600225B00AE9FAD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				250B281326046F6300AE9FAD /* League */,
 				250B27B62600225B00AE9FAD /* PlayerPool.swift */,
 				250B27B72600225B00AE9FAD /* Team.swift */,
-				250B27B82600225B00AE9FAD /* League.swift */,
 				250B27B92600225B00AE9FAD /* Player.swift */,
 			);
 			path = Models;
@@ -325,6 +329,16 @@
 				250B27DB2600227600AE9FAD /* CHUD - Standings */,
 			);
 			path = CentralHUD;
+			sourceTree = "<group>";
+		};
+		250B281326046F6300AE9FAD /* League */ = {
+			isa = PBXGroup;
+			children = (
+				250B27B82600225B00AE9FAD /* League.swift */,
+				250B281426046F7700AE9FAD /* LoadLeague.swift */,
+				250B281C26046FD500AE9FAD /* DraftLeague.swift */,
+			);
+			path = League;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,6 +475,7 @@
 			files = (
 				250B27E32600227600AE9FAD /* SearchResults.swift in Sources */,
 				250B27E72600227600AE9FAD /* RowExpandButton.swift in Sources */,
+				250B281526046F7700AE9FAD /* LoadLeague.swift in Sources */,
 				250B27EE2600227600AE9FAD /* MyTeamHUD.swift in Sources */,
 				250B27EA2600227600AE9FAD /* ExpandedPlayerRow.swift in Sources */,
 				250B27E82600227600AE9FAD /* HitterRow.swift in Sources */,
@@ -476,6 +491,7 @@
 				250B27E52600227600AE9FAD /* HeaderRows.swift in Sources */,
 				250B27E02600227600AE9FAD /* TeamRoster.swift in Sources */,
 				250B27BA2600225B00AE9FAD /* PlayerPool.swift in Sources */,
+				250B281D26046FD500AE9FAD /* DraftLeague.swift in Sources */,
 				250B27DF2600227600AE9FAD /* RostersHUD.swift in Sources */,
 				250B280F260023ED00AE9FAD /* Dashboard.swift in Sources */,
 				250B2800260022F300AE9FAD /* Data.swift in Sources */,

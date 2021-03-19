@@ -218,7 +218,8 @@ extension Pitcher {
         case strPos = "Pos."
         case playerid
         case wFIP, FIP
-        case IP, QS, SVHD, ERA, WHIP, Kp9
+        case IP, QS, SVHD, ERA, WHIP
+        case Kp9 = "K/9"
     }
     
     convenience init(from decoder: Decoder) throws {
