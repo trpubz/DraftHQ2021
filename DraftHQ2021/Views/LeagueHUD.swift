@@ -9,7 +9,8 @@
 import SwiftUI
 
 struct LeagueHUD: View {
-    @ObservedObject var lg: League = league
+    @EnvironmentObject var league: League
+    
     var body: some View {
         HStack {
             VStack(alignment: .center) {
@@ -21,21 +22,21 @@ struct LeagueHUD: View {
                 HStack {
                     Text("Total budget remaining: ")
                         .frame(width: 150, alignment: .leading)
-                    Text("₪ \(lg.leagueShekels)")
+                    Text("₪ \(league.leagueShekels)")
                         .fontWeight(.semibold)
                         .frame(width: 70, alignment: .trailing)
                 }
                 HStack {
                     Text("Total value remaining: ")
                         .frame(width: 150, alignment: .leading)
-                    Text("₪ \(lg.valueOfUndrafted)")
+                    Text("₪ \(league.valueOfUndrafted)")
                         .fontWeight(.semibold)
                         .frame(width: 70, alignment: .trailing)
                 }
                 HStack {
                     Text("Total players drafted: ")
                         .frame(width: 150, alignment: .leading)
-                    Text("\(lg.playersDrafted) / 252")
+                    Text("\(league.playersDrafted) / 252")
                         .fontWeight(.semibold)
                         .frame(width: 70, alignment: .trailing)
                 }
@@ -54,8 +55,8 @@ struct LeagueHUD: View {
                 //LEADERBOARD
                 HStack {
                     VStack {
-                        StatGrouping(stat: "HR", group: lg.rnksHR)
-                        StatGrouping(stat: "R", group: lg.rnksR)
+                        StatGrouping(stat: "HR", group: league.rnksHR)
+                        StatGrouping(stat: "R", group: league.rnksR)
                         StatGrouping(stat: "RBI", group: league.rnksRBI)
                     }
                     Divider()
