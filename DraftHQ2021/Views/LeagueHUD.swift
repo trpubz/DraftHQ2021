@@ -4,7 +4,7 @@
 //
 //  Created by Taylor Pubins on 5/4/20.
 //  Copyright © 2020 trpubz. All rights reserved.
-//
+//  LeagueHUD is positioned in the upperleft of the dashboard
 
 import SwiftUI
 
@@ -36,7 +36,7 @@ struct LeagueHUD: View {
                 HStack {
                     Text("Total players drafted: ")
                         .frame(width: 150, alignment: .leading)
-                    Text("\(league.playersDrafted) / 252")
+                    Text("\(league.playersDrafted) / \(league.getLeaguePlayerSize())")
                         .fontWeight(.semibold)
                         .frame(width: 70, alignment: .trailing)
                 }
@@ -90,7 +90,9 @@ struct LeagueHUD: View {
 struct StatGrouping: View {
     var stat: String
     var group: [String:Int]
-    private var leader: String {group.sorted(by: {$0.value < $1.value}).first!.key}
+    private var leader: String {
+        group.sorted(by: {$0.value < $1.value}).first!.key
+    }
     
     var body: some View {
         HStack(alignment: .bottom, spacing: 3) {
@@ -107,5 +109,6 @@ struct StatGrouping: View {
 struct LeagueHUD_Previews: PreviewProvider {
     static var previews: some View {
         LeagueHUD()
+            .environmentObject(League())
     }
 }

@@ -53,6 +53,7 @@ enum selectedTab {
 struct CentralHUD_Previews: PreviewProvider {
     static var previews: some View {
         CentralHUD()
+            .environmentObject(League())
             .frame(width: 965, height: 700)
     }
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct DraftHQ2021App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Dashboard()
                 .environmentObject(League())
         }
     }

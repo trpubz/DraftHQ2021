@@ -66,6 +66,7 @@ struct PitcherRowInline: View {
 }
 
 struct RLPPitcherRow: View {
+    @EnvironmentObject var league: League
     let pos: POS
     var rlp: RLPPitcher {
         switch pos {
@@ -113,7 +114,7 @@ struct PitcherRow_Previews: PreviewProvider {
             PitcherHeaderRow()
             ScrollView {
                 
-                PitcherRow(pitcher: league.pitchers.first(where: {$0.name == "Jacob deGrom"})!, rowState: .inline)
+                PitcherRow(pitcher: League().pitchers.first(where: {$0.name == "Jacob deGrom"})!, rowState: .inline)
                 
             }
             .frame(width: 980)

@@ -11,8 +11,7 @@ import Foundation
 //instantiates rosters with Average Player Architypes
 extension League {
     func instantiateRosters() {
-        let numberOfTeams = teams.count
-        for i in 0...numberOfTeams - 1 {
+        for i in teams.indices {
             teams[i].instantiateRoster(withLeague: self)
         }
         
@@ -36,7 +35,7 @@ extension League {
         case .DH: ppDH.playerDrafted(hitter: p)
         case .SP: ppSP.playerDrafted(pitcher: p)
         case .RP: ppRP.playerDrafted(pitcher: p)
-        default: print("League.swift/func playerDrafted/default: won't print")
+        default: print("DraftLeague.swift/func playerDrafted/default: won't print")
         }
         
         for tm in teams {
@@ -51,7 +50,7 @@ extension League {
                 case .DH: tm.updateAPA(ppHIT: ppDH)
                 case .SP: tm.updateAPA(ppPIT: ppSP)
                 case .RP: tm.updateAPA(ppPIT: ppRP)
-                default: print("League.swift/func playerDrafted/default: won't print")
+                default: print("DraftLeague.swift/func playerDrafted/default: won't print")
                 }
             }
         }
@@ -62,16 +61,16 @@ extension League {
     }
     
     func projectRecords() {
-        teams.forEach({$0.resetRecord()})
+        teams.forEach({$0.cleanRecord()})
         
-        for i in 0...10 {
-            for j in i + 1...11 {
+        for i in 0...teams.count - 2 { // -2 is required for indicie offset & won't use the last team in the high level iteration
+            for j in i + 1...teams.count - 1 { //-1 is requred for indicie offset
                 if j > i {
                     H2H_Handler(teams[i], vs: teams[j])
                 }
             }
         }
-        logEvent("League.swift/func projectRecords - finished projecting records")
+        logEvent("DraftLeague.swift/func projectRecords - finished projecting records")
     }
     
     func H2H_Handler(_ tm1: Team, vs tm2: Team) {

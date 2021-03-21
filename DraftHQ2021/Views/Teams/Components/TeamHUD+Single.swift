@@ -1,5 +1,5 @@
 //
-//  TeamHUD.swift
+//  TeamHUD+Single.swift
 //  DraftHQ2021
 //
 //  Created by Taylor Pubins on 5/4/20.
@@ -58,6 +58,6 @@ struct TeamHUD: View {
 
 struct TeamHUD_Previews: PreviewProvider {
     static var previews: some View {
-        TeamHUD(team: league.teams[0])
+        TeamHUD(team: League().teams[0])
     }
 }

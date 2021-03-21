@@ -23,10 +23,10 @@ struct Dashboard: View {
                 Spacer()
                 MyTeamHUD()
                 Spacer()
-            }
+            }.frame(height: 100)
             Divider()
             HStack {
-                TeamHUDsStack()
+                TeamHUDsLeague()
                 Divider()
                     .padding(.vertical)
                 //central player region
@@ -49,6 +49,7 @@ struct Dashboard: View {
 struct Dashboard_Previews: PreviewProvider {
     static var previews: some View {
         Dashboard()
+            .environmentObject(League())
     }
 }
 

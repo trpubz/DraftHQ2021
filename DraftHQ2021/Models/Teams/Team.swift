@@ -4,11 +4,12 @@
 //
 //  Created by Taylor Pubins on 4/17/20.
 //  Copyright © 2020 trpubz. All rights reserved.
-//
+//  Abbreviation References:
+//  APA - Average Player Available (at a given position); used to estimate the remaining talent in a player pool after a player has been drafted.
 
 import Foundation
 
-final class Team: Decodable, Identifiable, ObservableObject {
+final class Team: Codable, Identifiable, ObservableObject {
     let id = UUID()
     let tmAbbrv: String
     let teamName: String
@@ -91,7 +92,12 @@ final class Team: Decodable, Identifiable, ObservableObject {
     @Published var tmL: Int = 0
     @Published var tmT: Int = 0
     var projRecordToString: String { "Proj. Record: \(tmW)-\(tmL)-\(tmT)" }
-    
+    func cleanRecord() {
+        self.tmW = 0
+        self.tmL = 0
+        self.tmT = 0
+    }
+    //------------------
     func instantiateRoster(withLeague lg: League) {
         self.roster[.C] = lg.ppC.apa
         self.roster[.IF1B] = lg.pp1B.apa
@@ -139,164 +145,10 @@ final class Team: Decodable, Identifiable, ObservableObject {
 //        )
     }
     
-    func resetRecord() {
-        self.tmW = 0
-        self.tmL = 0
-        self.tmT = 0
-    }
     init(tmAbbrv: String, teamName: String, owner: String) {
         self.tmAbbrv = tmAbbrv
         self.teamName = teamName
         self.owner = owner
-    }
-}
-// MARK: - draft logic
-extension Team {
-    func draft(player: Player, forShek: Int) {
-        logEvent("Team.swift/class Team/func draft -> \(self.tmAbbrv) drafted \(player.name) for: ₪\(forShek)")
-        self.budget -= forShek
-        player.draftedTeam = self
-        func assignToDHorBN() {
-            if roster[.DH]!.name.hasPrefix("apa") {
-                roster[.DH] = player
-            } else { assignToBN() }
-        }
-        func assignToPorBN() {
-            if roster[.P1]!.name.hasPrefix("apa") {
-                roster[.P1] = player
-            } else { assignToBN() }
-        }
-        func assignToBN() {
-            if roster[.BN1]!.name.hasPrefix("apa") {
-                roster[.BN1] = player
-            } else if roster[.BN2]!.name.hasPrefix("apa") {
-                roster[.BN2] = player
-            } else if roster[.BN3]!.name.hasPrefix("apa") {
-                roster[.BN3] = player
-            } else if roster[.BN4]!.name.hasPrefix("apa") {
-                roster[.BN4] = player
-            } else if roster[.BN5]!.name.hasPrefix("apa") {
-                roster[.BN5] = player
-            }
-        }
-        
-        switch player.priPos {
-        case .OF:
-            if roster[.OF1]!.name.hasPrefix("apa") {
-                roster[.OF1] = player
-            } else if roster[.OF2]!.name.hasPrefix("apa") {
-                roster[.OF2] = player
-            } else if roster[.OF3]!.name.hasPrefix("apa") {
-                roster[.OF3] = player
-            } else { assignToDHorBN() }
-        case .DH:
-            assignToDHorBN()
-        case .SP:
-            if roster[.SP1]!.name.hasPrefix("apa") {
-                roster[.SP1] = player
-            } else if roster[.SP2]!.name.hasPrefix("apa") {
-                roster[.SP2] = player
-            } else if roster[.SP3]!.name.hasPrefix("apa") {
-                roster[.SP3] = player
-            } else if roster[.SP4]!.name.hasPrefix("apa") {
-                roster[.SP4] = player
-            } else { assignToPorBN() }
-        case .RP:
-            if roster[.RP1]!.name.hasPrefix("apa") {
-                roster[.RP1] = player
-            } else if roster[.RP2]!.name.hasPrefix("apa") {
-                roster[.RP2] = player
-            } else { assignToPorBN() }
-        default:
-            if roster[RosterSlot(rawValue: player.priPos!.rawValue)!]!.name.hasPrefix("apa") {
-                roster[RosterSlot(rawValue: player.priPos!.rawValue)!] = player
-            } else { assignToDHorBN() }
-        }
-    }
-    
-    func updateAPA(ppHIT: PlayerPoolHitter) {
-        let pos = ppHIT.pos
-        
-        switch pos {
-        case .C, .IF1B, .IF2B, .IF3B, .SS, .DH:
-            //POS enums and RosterSlot enums have the same raw value for these positions
-            //use raw values to convert back and forth
-            if roster[Team.RosterSlot(rawValue: pos.rawValue)!]!.name.hasPrefix("apa") {
-                roster[Team.RosterSlot(rawValue: pos.rawValue)!] = ppHIT.apa
-            }
-        case .OF:
-            if roster[.OF1]!.name.hasPrefix("apa") {
-                roster[.OF1] = ppHIT.apa
-            }
-            if roster[.OF2]!.name.hasPrefix("apa") {
-                roster[.OF2] = ppHIT.apa
-            }
-            if roster[.OF3]!.name.hasPrefix("apa") {
-                roster[.OF3] = ppHIT.apa
-            }
-            //bench players use the average outfielder APA
-            //bench slots for offense are assigned to the 1st 3 bench slots
-            if roster[.BN1]!.name.hasPrefix("apa") {
-                roster[.BN1] = ppHIT.apa
-            }
-            if roster[.BN2]!.name.hasPrefix("apa") {
-                roster[.BN2] = ppHIT.apa
-            }
-            if roster[.BN3]!.name.hasPrefix("apa") {
-                roster[.BN3] = ppHIT.apa
-            }
-        default: print("probs won't print")
-        }
-    }
-    func updateAPA(ppPIT: PlayerPoolPitcher) {
-        let pos = ppPIT.pos
-        
-        switch pos {
-        case .SP:
-            if roster[.SP1]!.name.hasPrefix("apa") {
-                roster[.SP1] = ppPIT.apa
-            }
-            if roster[.SP2]!.name.hasPrefix("apa") {
-                roster[.SP2] = ppPIT.apa
-            }
-            if roster[.SP3]!.name.hasPrefix("apa") {
-                roster[.SP3] = ppPIT.apa
-            }
-            if roster[.SP4]!.name.hasPrefix("apa") {
-                roster[.SP4] = ppPIT.apa
-            }
-            if roster[.P1]!.name.hasPrefix("apa") {
-                roster[.P1] = ppPIT.apa
-            }
-            //bench players use the average SP APA
-            //bench slots for pitching are assigned to the last 2 bench slots
-            if roster[.BN4]!.name.hasPrefix("apa") {
-                roster[.BN4] = ppPIT.apa
-            }
-            if roster[.BN5]!.name.hasPrefix("apa") {
-                roster[.BN5] = ppPIT.apa
-            }
-        case .RP:
-            if roster[.RP1]!.name.hasPrefix("apa") {
-                roster[.RP1] = ppPIT.apa
-            }
-            if roster[.RP2]!.name.hasPrefix("apa") {
-                roster[.RP2] = ppPIT.apa
-            }
-        default: print("probs won't print")
-        }
-        
-    }
-    enum RosterSlot: String {
-        case C, SS, DH
-        case IF1B = "1B"
-        case IF2B = "2B"
-        case IF3B = "3B"
-        case OF1, OF2, OF3
-        case BN1, BN2, BN3, BN4, BN5
-        case SP1, SP2, SP3, SP4
-        case P1
-        case RP1, RP2
     }
 }
 // MARK: - decoding logic
@@ -316,12 +168,19 @@ extension Team {
         
         self.init(tmAbbrv: tmAbbrv, teamName: teamName, owner: owner)
     }
+    
+    //conform to Codeable Protocol
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(tmAbbrv, forKey: .tmAbbrv)
+        try container.encode(teamName, forKey: .teamName)
+        try container.encode(owner, forKey: .owner)
+    }
 }
 
 extension Team: Equatable {
     static func == (lhs: Team, rhs: Team) -> Bool {
         return lhs.id == rhs.id
     }
-    
-    
 }
+

@@ -125,7 +125,7 @@ struct HeaderRows_Previews: PreviewProvider {
 //        }.frame(width: 1000)
         List {
             PitcherHeaderRow()
-            PitcherRow(pitcher: league.pitchers.first(where: {$0.name == "Gerrit Cole"})!)
+            PitcherRow(pitcher: League().pitchers.first(where: {$0.name == "Gerrit Cole"})!)
         }.frame(width: 1000)
     }
 }

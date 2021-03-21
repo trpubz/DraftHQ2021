@@ -9,61 +9,36 @@ import Foundation
 
 // MARK: - Loading functions
 extension League {
-    func loadTeams() { //reference Team.swift
+    func loadAsset(asset: assets) {
         let data: Data
         
-        guard let file = Bundle.main.url(forResource: "teams", withExtension: "json")
+        guard let file = Bundle.main.url(forResource: asset.rawValue, withExtension: "json")
             else {
-                fatalError("Couldn't find teams.json in main bundle.")
+            fatalError("Couldn't find \(asset).json in main bundle.")
         }
         
         do {
             data = try Data(contentsOf: file)
         } catch {
-            fatalError("Couldn't load teams.json from main bundle:\n\(error)")
+            fatalError("Couldn't load \(asset).json from main bundle:\n\(error)")
         }
-
-        let tempTeams: [Team] = try! JSONDecoder().decode([Team].self, from: data)
-        for t in tempTeams {
-            self.teams.append(t)
-        }
-    }
-    
-    func loadHitters() { //reference Player.swift
-        let data: Data
         
-        guard let file = Bundle.main.url(forResource: "hitters", withExtension: "json")
-            else {
-                fatalError("Couldn't find hitters.json in main bundle.")
-        }
-        do {
-            data = try Data(contentsOf: file)
-        } catch {
-            fatalError("Couldn't load hitters.json from main bundle:\n\(error)")
-        }
-
-        let tempHitters: [Hitter] = try! JSONDecoder().decode([Hitter].self, from: data)
-        for h in tempHitters {
-            self.hitters.append(h)
-        }
-    }
-    
-    func loadPitchers() { //reference Player.swift
-        let data: Data
-        
-        guard let file = Bundle.main.url(forResource: "pitchers", withExtension: "json")
-            else {
-                fatalError("Couldn't find pitchers.json in main bundle.")
-        }
-        do {
-            data = try Data(contentsOf: file)
-        } catch {
-            fatalError("Couldn't load pitchers.json from main bundle:\n\(error)")
-        }
-
-        let tempPitchers: [Pitcher] = try! JSONDecoder().decode([Pitcher].self, from: data)
-        for p in tempPitchers {
-            self.pitchers.append(p)
+        switch asset {
+        case .teams:
+            let tempTeams: [Team] = try! JSONDecoder().decode([Team].self, from: data)
+            for t in tempTeams {
+                self.teams.append(t)
+            }
+        case .hitters:
+            let tempHitters: [Hitter] = try! JSONDecoder().decode([Hitter].self, from: data)
+            for h in tempHitters {
+                self.hitters.append(h)
+            }
+        case .pitchers:
+            let tempPitchers: [Pitcher] = try! JSONDecoder().decode([Pitcher].self, from: data)
+            for p in tempPitchers {
+                self.pitchers.append(p)
+            }
         }
     }
 }

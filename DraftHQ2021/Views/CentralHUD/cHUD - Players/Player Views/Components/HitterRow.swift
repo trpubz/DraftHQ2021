@@ -14,7 +14,7 @@ struct HitterRow: View {
     @State var rowState: PlayerRowState = .inline
     
     var body: some View {
-        VStack {
+        VStack(alignment: .center) {
             HitterRowInline(hitter: hitter, rowState: $rowState)
             
             if rowState == .expanded {
@@ -71,6 +71,7 @@ struct HitterRowInline: View {
 
 
 struct RLPHitterRow: View {
+    @EnvironmentObject var league: League
     let pos: POS
     var rlp: RLPHitter {
         switch pos {
@@ -125,7 +126,7 @@ struct HitterRow_Previews: PreviewProvider {
             HitterHeaderRow()
             ScrollView {
                 
-                HitterRow(hitter: league.hitters.first(where: {$0.name == "Jeff McNeil"})!)
+                HitterRow(hitter: League().hitters.first(where: {$0.name == "Jeff McNeil"})!)
 //                HitterRowExpanded(hitter: league.hitters[0], rowState: .constant(.expanded))
             }
 

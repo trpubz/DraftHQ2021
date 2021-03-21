@@ -9,7 +9,8 @@
 import SwiftUI
 
 struct MyRosterView: View {
-    @ObservedObject var me: Team = league.teams[0]
+    @EnvironmentObject var league: League
+    var me: Team { self.league.teams[0] }
     
     var body: some View {
         VStack {

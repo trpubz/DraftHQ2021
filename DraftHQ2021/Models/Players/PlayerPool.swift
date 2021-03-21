@@ -4,7 +4,8 @@
 //
 //  Created by Taylor Pubins on 5/13/20.
 //  Copyright © 2020 trpubz. All rights reserved.
-//
+//  Abbreviation References:
+//  APA - Average Player Available (at a given position); used to estimate the remaining talent in a player pool after a player has been drafted.
 
 import Foundation
 
@@ -15,7 +16,8 @@ struct PlayerPoolHitter {
     var uR: Int { players.map({$0.uR}).total }
     var uRBI: Int { players.map({$0.uRBI}).total }
     var uNSB: Int { players.map({$0.uNSB}).total }
-    //required to use .magnitude because rate stats converted to weighted stats cause negative values
+    // .magnitude is absolute value
+    // required to use .magnitude because rate stats converted to weighted stats cause negative values
     var uOBP: Double { players.map({$0.uOBP.magnitude}).total }
     var uSLG: Double { players.map({$0.uSLG.magnitude}).total }
     var apa: Hitter {

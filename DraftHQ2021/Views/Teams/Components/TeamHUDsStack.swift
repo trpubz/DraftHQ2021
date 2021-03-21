@@ -4,11 +4,13 @@
 //
 //  Created by Taylor Pubins on 4/17/20.
 //  Copyright © 2020 trpubz. All rights reserved.
-//
+//  Depricated on 20 MAR 2021 - trp
 
 import SwiftUI
 
+// This view is on the main HUD, left hand column
 struct TeamHUDsStack: View {
+    @EnvironmentObject var league: League
     @State var hoverState = false
     
     var body: some View {
@@ -51,6 +53,7 @@ struct TeamHUDsStack_Previews: PreviewProvider {
     
     static var previews: some View {
         TeamHUDsStack()
+            .environmentObject(League())
         
 //        TeamHUDs(team: Team(tmAbbrv: "PUBE", teamName: "Magic Loogies", owner: "T. Pubins"))
     }

@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ExpandedPlayerRow: View {
+    @EnvironmentObject var league: League
     var plyr: Player
     @State var auctionPrice: Double = 1
     @State var team: String = ""
@@ -25,10 +26,14 @@ struct ExpandedPlayerRow: View {
             .frame(width: 120.0)
             
             VStack(spacing: 0.1) {
-                Text("Auction Price: ₪ \(Int(auctionPrice))")
-                    .frame(width: 150.0)
-                Slider(value: $auctionPrice, in: 1...99)
-                    .frame(width: 125.0)
+                // depricated 21 MAR 2021
+//                Text("Auction Price: ₪ \(Int(auctionPrice))")
+//                    .frame(width: 150.0)
+//                Slider(value: $auctionPrice, in: 1...99)
+//                    .frame(width: 125.0)
+                Stepper("Auction Price: ₪ \(Int(auctionPrice))", value: $auctionPrice, in: 1...116)
+                    
+                    .frame(width: 150, height: 30)
             }
             .padding()
             .frame(width: 150)
@@ -60,7 +65,8 @@ struct ExpandedPlayerRow: View {
 
 struct ExpandedPlayerRow_Previews: PreviewProvider {
     static var previews: some View {
-        ExpandedPlayerRow(plyr: league.hitters[0], rowState: .constant(.expanded))
+        ExpandedPlayerRow(plyr: League().hitters[0], rowState: .constant(.expanded))
+            .environmentObject(League())
     }
 }
 

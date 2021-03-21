@@ -4,12 +4,13 @@
 //
 //  Created by Taylor Pubins on 5/4/20.
 //  Copyright © 2020 trpubz. All rights reserved.
-//
+//  Component sits in the upperright corner of dashboard adjacent to the League info quick display
 
 import SwiftUI
 
 struct MyTeamHUD: View {
-    @ObservedObject var me: Team = league.teams[0]
+    @EnvironmentObject var league: League
+    var me: Team { self.league.teams[0] }
     
     var body: some View {
         HStack {
@@ -158,5 +159,6 @@ struct RankBox: View {
 struct MyTeamHUD_Previews: PreviewProvider {
     static var previews: some View {
         MyTeamHUD()
+            .environmentObject(League())
     }
 }
